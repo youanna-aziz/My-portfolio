@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+  margin: 0;  /* Remove default margin */
+  padding: 0;  /* Remove default padding */
+  box-sizing: border-box;  /* Include padding and border in total width/height */
+  font-family: 'Poppins', sans-serif;  /* Set default font */
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;  /* Horizontal layout */
+  align-items: center;  /* Vertically center content */
+  height: 80px;
+  width: 100%; 
+  position: sticky;  /* Stick to top on scroll */
+  top: 0;
+  z-index: 999;  /* Make sure navbar is above everything */
+  justify-content: flex-start; /* Align items to the left */
+  padding-right: 140px;  /* Space on the right */
+  backdrop-filter: blur(24px);
+}
+.navbar-container {
+  display: flex;  /* Horizontal layout */
+  align-items: center;  /* Center vertically */
+  justify-content: center;  /* Center horizontally */
+  max-width: 1600px;  
+  width: 100%;
+  padding: 0 30px;  /* Left and right padding */
+}
+.navbar-container .navbar-menu {
+    display: flex;
+    text-align: center;
+    gap: 4rem;  /* Space between links */
+    list-style: none;  /* Remove bullets */
+}
+.navbar-menu .link::after {
+  content: "";  /* Create underline */
+  position: absolute;
+  bottom: -5px;  /* Position below text */
+  left: 0;
+  width: 0%; 
+  height: 2px;  /* Thickness of underline */
+  background-color: #222;  /* Underline color */
+  transition: width 0.3s ease;  /* Animate width on hover */
+}
+.link {
+    text-decoration: none;  /* Remove underline */
+    position: relative;  /* Needed for custom underline */
+    &:before,
+    .link-title {
+      transform: translateX(0);/* Reset horizontal movement: move element back to original position */
+      opacity: 1;  /* Make element fully visible */
+    }
+}
+.link-title {
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in;
+  transform-origin:  center;
+  display: flex;
+  text-indent: 10px;
+  width: 100%;
+  flex:auto;
+  font-size: 20px;  
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px; 
+}
+.navbar-menu .link:hover::after {
+  width: 100%;  /* Full underline on hover */
+}
+
+/*-----------------------------------------*/
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.hero-section {
+  display: flex;  /* Layout left and right side by side */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 100vh;  /* Full screen height */
+}
+.left-content {
+  max-width: 50%;  /* Take up half width */
+}
+.left-content h1 {
+  font-size: 95px;
+  color: #999999;
+  margin: 0 0 20px;
+  margin-left: -150px;
+  margin-top: 135px;
+  margin-bottom: 0px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.cv-button {
+  background-color: #f8d7da;  /* Light pink button */
+  border: none;
+  padding: 25px 60px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #665d5d;
+  border-radius: 4px;
+  margin-left: -150px;
+  margin-top: -10px;
+  letter-spacing: 4px;
+}
+.pic123 {
+  position: relative; 
+  width: 50%;
+  height: 50vh;
+  bottom: 30%; 
+  padding: 0;
+  left: 5.9%;
+  margin-top: 0%;
+}
+.pic12 {
+  position: absolute;
+  top: 109px;
+  right: 0;
+  width: 290px; 
+  height: auto;
+  border-radius: 8px
+}
+.gray-box {
+  background-color: #f5f5f5;  
+  width: 84.2%;  
+  height: 595px;  
+  margin-left: 15%;  /* Left spacing */
+  margin-right: 0; 
+  margin-top: -6%;
+}
+
+/*-----------------------------------------*/
+
+.left-content1 h1 {
+  font-size: 95px;
+  color: #999999;
+  margin: 0 0 20px;
+  margin-left: 113px;
+  margin-top: 100px;
+}
+.header{
+  align-items: center;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-container {
+  display: grid;
+  border-radius: 8px;
+  min-height: 250px;
+  margin: 0 60px;
+}
+.feature1{
+  grid-area: feature1;
+}
+.feature2{
+  grid-area: feature2;
+}
+.feature3{
+  grid-area: feature3;
+  color: #464242;
+  text-shadow: #000;
+}
+.feature4{
+  grid-area: feature4;
+  color: #464242;
+  text-shadow: #000;
+}
+.basic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+      "header header"
+      "feature1 feature2"
+      "feature3 feature4"
+      "footer footer";
+    row-gap: 40px;
+    column-gap: 60px;
+}
+.grid-item {
+  border-radius: 6px;
+  font-size: 2rem;
+  text-align: center;
+}
+.grid-item img{
+  width: 80%;  /* Equal image width */
+  height: auto;  /* Keep aspect ratio */
+  display: block;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*-----------------------------------------*/
+
+.left-content2 h1 {
+  font-size: 30px;
+  color: #525252;
+  margin: 0 0 20px;
+  margin-left: 115px;
+  margin-right: 120px;
+  margin-top: 30px;
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 33.5px 0;
+}
+.icon2{
+  font-size: 70px;  
+  text-align: center;
+
+}
+.link3{
+  color: #d6999e;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: center;
+}
+
+/*--------------------------------*/
+
+.cv-button1 {
+  background-color: #f8d7da; 
+  border: none;
+  padding: 25px 60px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #665d5d;
+  border-radius: 4px;
+  margin-left: 0px;
+  letter-spacing: 4px;
+}
+
+/*--------------------------------*/
+
+.footer {
+  grid-area: footer;  
+  height: 180px;
+  background-color: #9c9797;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  /* Align links to the right */
+  padding: 0 40px;
+  box-shadow: 200px #000;
+  margin-bottom:-50px;
+  margin-top: auto;
+}
+.footer-links {
+  display: flex;
+  gap: 40px;  /* Space between footer links */
+}
+.footer-link {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;  /* Prevents the element from shrinking when there isn't enough space */
+  left: 22px;
+  margin-left: 50px;
+  text-decoration: none;
+  color: #242020;
+  font-size: x-large;
+  position: relative;
+  transition: color 0.3s ease;
+  text-align: left;     
+  margin-right: 50px;   
+}
+.footer-link::after {
+  content: "";  /* Custom underline for footer links */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #222;
+  transition: width 0.3s ease;
+}
+.footer-link:hover {
+  color: #333;  /* Change color on hover */
+}
+.footer-link:hover::after {
+  width: 100px;  /* Show underline on hover */
+  left: auto;
+  right: auto;
+}
+
+
+/*Responsive Design*/
+
+/*For the medium screens*/
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .flex-section {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .btn {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* For the small screens*/
+@media (max-width: 576px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+  }
+}
